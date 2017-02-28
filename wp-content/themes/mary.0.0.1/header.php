@@ -66,7 +66,7 @@
                         </a>
                     
             </div>
-		
+		    <!--
 			<div class="sidebar pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
 			
 				<div class="pure-menu pure-menu-open border border-top-1 margin-top-1">
@@ -78,10 +78,12 @@
 					<?php wp_nav_menu( $menu_args ); ?>
 				</div>
 				
-			</div><!--/.sidebar-->
+			</div>
+            -->
     	
+        <div class="pure-u-1-8"></div>
     	
-    	<div class="content pure-u-1 padding-bottom-2">
+    	<div class="content pure-u-3-4 padding-bottom-2">
     	
     	
     	<!-- end header.php -->

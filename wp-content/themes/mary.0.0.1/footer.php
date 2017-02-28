@@ -1,12 +1,10 @@
 <!-- start footer.php -->
-			<div class="pure-g">
-		
-			<div class="footer pure-u-1 padded pull-down border-top-1 padding-top-2 margin-top-2">
-				<p><a href="http://www.alleyhousestudio.com">Alleyhouse Studio</a> &bull; 2k14 &bull; <a href="http://www.twitter.com/mccaartiin">@mccaartiin</a></p>
-			</div>
-			</div>
+			
+			
 			
 		</div><!-- / .content -->
+
+		<div class="pure-u-1-8"></div>
 			
 		</div><!--/ #layout.pure-g -->
 		
