@@ -1,0 +1,697 @@
+/*
+Theme Name: MaRy
+Theme URI: http://www.mccartin.info
+Author: John McCartin
+Author URI: http://mccartin.info/
+Description: Rebooting a reboot
+Version: 0.0.1
+Tags: starter, h5bp, sass, pure
+
+No rights reserved.
+
+Workin in SASS.
+
+
+
+
+      ___           ___       ___       ___           ___     
+     /\  \         /\__\     /\__\     /\  \         |\__\    
+    /::\  \       /:/  /    /:/  /    /::\  \        |:|  |   
+   /:/\:\  \     /:/  /    /:/  /    /:/\:\  \       |:|  |   
+  /::\~\:\  \   /:/  /    /:/  /    /::\~\:\  \      |:|__|__ 
+ /:/\:\ \:\__\ /:/__/    /:/__/    /:/\:\ \:\__\     /::::\__\
+ \/__\:\/:/  / \:\  \    \:\  \    \:\~\:\ \/__/    /:/~~/~   
+      \::/  /   \:\  \    \:\  \    \:\ \:\__\     /:/  /     
+      /:/  /     \:\  \    \:\  \    \:\ \/__/     \/__/      
+     /:/  /       \:\__\    \:\__\    \:\__\                  
+     \/__/         \/__/     \/__/     \/__/                  
+     
+      ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \    
+    /:/  /        /::\  \       /:/  /        /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:/  /        /:/\ \  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/  /  ___   _\:\~\ \  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/__/  /\__\ /\ \:\ \ \__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \:\  \ /:/  / \:\ \:\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /       \::/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+http://www.alleyhouseestudio.com
+
+
+
+
+My simplistic attempts at
+												  
+	  _|_|      _|_|      _|_|_|    _|_|_|    _|_|_|  
+	_|    _|  _|    _|  _|        _|        _|        
+	_|    _|  _|    _|  _|          _|_|      _|_|    
+	_|    _|  _|    _|  _|              _|        _|  
+	  _|_|      _|_|      _|_|_|  _|_|_|    _|_|_|   
+			  
+breaking from that model for where need be.
+                                                 
+    
+    
+
+  /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+
+
+		
+
+		** Dependencies: Pure CSS (responsive rollup) http://purecss.io/
+		
+
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+
+
+
+                _       _     _           
+__   ____ _ _ __(_) __ _| |__ | | ___  ___ 
+\ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+  \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+*/
+/*
+
+ _                            _       
+(_)_ __ ___  _ __   ___  _ __| |_ ___ 
+| | '_ ` _ \| '_ \ / _ \| '__| __/ __|
+| | | | | | | |_) | (_) | |  | |_\__ \
+|_|_| |_| |_| .__/ \___/|_|   \__|___/
+            |_|                       
+*/
+/* line 1, scss/_border.scss */
+.border {
+  border-color: #666 !important;
+}
+
+/* line 5, scss/_border.scss */
+.border-mid {
+  border-color: #ddd !important;
+}
+
+/* line 10, scss/_border.scss */
+.border-1 {
+  border: 1px solid;
+}
+
+/* line 13, scss/_border.scss */
+.border-2 {
+  border: 2px solid;
+}
+
+/* line 16, scss/_border.scss */
+.border-4 {
+  border: 4px solid;
+}
+
+/* line 20, scss/_border.scss */
+.border-top-1 {
+  border-top: 1px solid;
+}
+
+/* line 23, scss/_border.scss */
+.border-top-2 {
+  border-top: 2px solid;
+}
+
+/* line 26, scss/_border.scss */
+.border-top-4 {
+  border-top: 4px solid;
+}
+
+/* line 30, scss/_border.scss */
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+
+/* line 33, scss/_border.scss */
+.border-bottom-2 {
+  border-bottom: 2px solid;
+}
+
+/* line 36, scss/_border.scss */
+.border-bottom-4 {
+  border-bottom: 4px solid;
+}
+
+/* line 40, scss/_border.scss */
+.border-left-1 {
+  border-left: 1px solid;
+}
+
+/* line 43, scss/_border.scss */
+.border-left-2 {
+  border-left: 2px solid;
+}
+
+/* line 46, scss/_border.scss */
+.border-left-4 {
+  border-left: 4px solid;
+}
+
+/* line 50, scss/_border.scss */
+.border-right-1 {
+  border-right: 1px solid;
+}
+
+/* line 53, scss/_border.scss */
+.border-right-2 {
+  border-right: 2px solid;
+}
+
+/* line 56, scss/_border.scss */
+.border-right-4 {
+  border-right: 4px solid;
+}
+
+/* line 1, scss/_dark.scss */
+.pure-menu {
+  list-style: none;
+}
+
+/* line 5, scss/_dark.scss */
+.dark {
+  background: #222;
+  color: #fff;
+}
+/* line 13, scss/_dark.scss */
+.dark .border {
+  border-color: #fff;
+}
+/* line 17, scss/_dark.scss */
+.dark .pure-menu.pure-menu-open, .dark .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+/* line 22, scss/_dark.scss */
+.dark .pure-menu a, .dark .pure-menu .pure-menu-can-have-children > li:after {
+  color: #fff;
+}
+/* line 26, scss/_dark.scss */
+.dark .pure-menu li a {
+  padding: 5px 0px;
+}
+/* line 30, scss/_dark.scss */
+.dark .pure-menu li a:hover, .dark .pure-menu li a:focus {
+  color: #ddd;
+}
+/* line 36, scss/_dark.scss */
+.dark .pure-menu .sub-menu a {
+  color: #fff;
+  padding-left: 1em;
+}
+/* line 41, scss/_dark.scss */
+.dark .pure-menu .sub-menu li:hover > a {
+  color: #ddd;
+}
+/* line 45, scss/_dark.scss */
+.dark a {
+  color: #fff;
+}
+/* line 49, scss/_dark.scss */
+.dark a:hover {
+  color: #ddd;
+}
+
+/* line 56, scss/_dark.scss */
+.brand-title.dark {
+  background: orange;
+}
+
+/* line 6, scss/_debug.scss */
+.debug {
+  border: 1px solid;
+}
+
+/* line 10, scss/_debug.scss */
+.debug-red {
+  border-color: red;
+}
+
+/* line 14, scss/_debug.scss */
+.debug-yellow {
+  border-color: yellow;
+}
+
+/* line 1, scss/_menu.scss */
+.nav-menu {
+  background: #666;
+}
+
+/* line 5, scss/_menu.scss */
+.pure-menu ul {
+  visibility: visible;
+  top: auto;
+  left: auto;
+  position: relative;
+}
+
+/* line 13, scss/_menu.scss */
+.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+
+/* line 18, scss/_menu.scss */
+.pure-menu a, .pure-menu .pure-menu-can-have-children > li:after {
+  color: #222;
+}
+
+/* line 22, scss/_menu.scss */
+.pure-menu li a {
+  padding: 5px 0px;
+}
+
+/* line 26, scss/_menu.scss */
+.pure-menu li a:hover, .pure-menu li a:focus {
+  color: #222;
+  background: orange;
+}
+
+/* line 1, scss/_margin.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 5, scss/_margin.scss */
+.margin-1 {
+  margin: 1em;
+}
+
+/* line 9, scss/_margin.scss */
+.margin-2 {
+  margin: 2em;
+}
+
+/* line 13, scss/_margin.scss */
+.margin-4 {
+  margin: 4em;
+}
+
+/* line 17, scss/_margin.scss */
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+/* line 21, scss/_margin.scss */
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+/* line 25, scss/_margin.scss */
+.margin-top-4 {
+  margin-top: 4em;
+}
+
+/* line 29, scss/_margin.scss */
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+/* line 33, scss/_margin.scss */
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+/* line 37, scss/_margin.scss */
+.margin-bottom-4 {
+  margin-bottom: 4em;
+}
+
+/* line 41, scss/_margin.scss */
+.margin-right-1 {
+  margin-right: 1em;
+}
+
+/* line 45, scss/_margin.scss */
+.margin-right-2 {
+  margin-right: 2em;
+}
+
+/* line 49, scss/_margin.scss */
+.margin-right-4 {
+  margin-right: 4em;
+}
+
+/* line 53, scss/_margin.scss */
+.margin-left-1 {
+  margin-left: 1em;
+}
+
+/* line 57, scss/_margin.scss */
+.margin-left-2 {
+  margin-left: 2em;
+}
+
+/* line 61, scss/_margin.scss */
+.margin-left-4 {
+  margin-left: 4em;
+}
+
+/* line 1, scss/_padding.scss */
+.padding-1 {
+  padding: 1em;
+}
+
+/* line 5, scss/_padding.scss */
+.padding-2 {
+  padding: 2em;
+}
+
+/* line 9, scss/_padding.scss */
+.padding-4 {
+  padding: 4em;
+}
+
+/* line 13, scss/_padding.scss */
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+/* line 17, scss/_padding.scss */
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+/* line 21, scss/_padding.scss */
+.padding-top-4 {
+  padding-top: 4em;
+}
+
+/* line 25, scss/_padding.scss */
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+
+/* line 29, scss/_padding.scss */
+.padding-bottom-2 {
+  padding-bottom: 2em;
+}
+
+/* line 33, scss/_padding.scss */
+.padding-bottom-4 {
+  padding-bottom: 4em;
+}
+
+/* line 37, scss/_padding.scss */
+.padding-right-1 {
+  padding-right: 1em;
+}
+
+/* line 41, scss/_padding.scss */
+.padding-right-2 {
+  padding-right: 2em;
+}
+
+/* line 45, scss/_padding.scss */
+.padding-right-4 {
+  padding-right: 4em;
+}
+
+/* line 49, scss/_padding.scss */
+.padding-left-1 {
+  padding-left: 1em;
+}
+
+/* line 53, scss/_padding.scss */
+.padding-left-2 {
+  padding-left: 2em;
+}
+
+/* line 57, scss/_padding.scss */
+.padding-left-4 {
+  padding-left: 4em;
+}
+
+/* line 1, scss/_positioners.scss */
+.pull-down {
+  bottom: 0;
+}
+
+/* line 5, scss/_positioners.scss */
+.pull-right {
+  float: right;
+  right: 0;
+}
+
+/* line 10, scss/_positioners.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 15, scss/_positioners.scss */
+.stretch-lr {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* line 21, scss/_positioners.scss */
+.stretch-all {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* line 29, scss/_positioners.scss */
+.fixed {
+  position: fixed !important;
+}
+
+/* line 33, scss/_positioners.scss */
+.static {
+  position: static !important;
+}
+
+/* line 37, scss/_positioners.scss */
+.relative {
+  position: relative !important;
+}
+
+/* line 41, scss/_positioners.scss */
+.absolute {
+  position: absolute !important;
+}
+
+/* line 45, scss/_positioners.scss */
+.centered {
+  margin: 0px auto;
+}
+
+@media screen and (min-width: 48em) {
+  /* line 4, scss/_queries.scss */
+  .nav-menu {
+    background: transparent;
+  }
+
+  /* line 9, scss/_queries.scss */
+  .md-pull-down {
+    bottom: 0;
+  }
+
+  /* line 14, scss/_queries.scss */
+  .header {
+    position: fixed;
+  }
+
+  /* line 18, scss/_queries.scss */
+  .content {
+    padding-top: 2em;
+  }
+
+  /* line 22, scss/_queries.scss */
+  .sidebar {
+    padding-top: 2em;
+  }
+}
+/* line 1, scss/_text.scss */
+.text-centered {
+  text-align: center;
+}
+
+/* line 5, scss/_text.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 9, scss/_text.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 1, scss/_wp-img.scss */
+img.alignright {
+  float: right;
+  margin: 0 0 1.5em 1.5em;
+}
+
+/* line 2, scss/_wp-img.scss */
+img.alignleft {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+
+/* line 3, scss/_wp-img.scss */
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 4, scss/_wp-img.scss */
+.alignright {
+  float: right;
+}
+
+/* line 5, scss/_wp-img.scss */
+.alignleft {
+  float: left;
+}
+
+/* line 6, scss/_wp-img.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 8, scss/_wp-img.scss */
+.post img, .page img {
+  max-width: 100%;
+}
+
+/*zs*/
+/* line 3, scss/_zs.scss */
+.top {
+  z-index: 99999;
+}
+
+/* line 7, scss/_zs.scss */
+.bottom {
+  z-index: -99999;
+}
+
+/* line 142, scss/style.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 148, scss/style.scss */
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* line 153, scss/style.scss */
+::selection {
+  background: orange;
+  color: #fff;
+}
+
+/* line 157, scss/style.scss */
+::-moz-selection {
+  background: orange;
+  color: #fff;
+}
+
+/* line 162, scss/style.scss */
+body {
+  color: #222;
+}
+
+/* line 165, scss/style.scss */
+a {
+  color: #222;
+}
+
+/* line 169, scss/style.scss */
+a:hover {
+  background: orange;
+}
+
+/* line 173, scss/style.scss */
+.link-on-dark {
+  color: #fff;
+}
+
+/* line 177, scss/style.scss */
+.link-no-decor {
+  text-decoration: none;
+}
+
+/* line 182, scss/style.scss */
+.pure-g > div {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 189, scss/style.scss */
+.layout {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 196, scss/style.scss */
+.reader {
+  max-width: 800px;
+}
+
+/* line 207, scss/style.scss */
+.ptitle {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+/* line 212, scss/style.scss */
+.header-bar {
+  height: 45px;
+}
+/* line 214, scss/style.scss */
+.header-bar img {
+  width: 250px;
+}
+/* line 218, scss/style.scss */
+.header-bar svg {
+  height: calc(45px - 12px);
+}
+/* line 220, scss/style.scss */
+.header-bar svg g rect {
+  fill: #fff;
+}
+
+/* line 227, scss/style.scss */
+.pointer {
+  cursor: pointer;
+}
